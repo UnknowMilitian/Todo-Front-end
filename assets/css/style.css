@@ -103,3 +103,72 @@ body {
 .glass form textarea::placeholder {
   color: var(--placeholder-color);
 }
+
+/* Content Section */
+.contents {
+  margin: 1rem 0;
+  padding: 2rem;
+  background: linear-gradient(
+    135deg,
+    var(--content-bg-start),
+    var(--content-bg-end)
+  );
+  backdrop-filter: var(--blur-effect);
+  -webkit-backdrop-filter: var(--blur-effect);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  max-height: 40vh;
+}
+
+.contents::-webkit-scrollbar {
+  width: 12px;
+}
+
+.contents::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px var(--scrollbar-track-color);
+  border-radius: 10px;
+}
+
+.contents::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px var(--scrollbar-color);
+}
+
+.contents .content {
+  background-color: var(--input-bg);
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contents .content .content__text {
+  width: 80%;
+}
+
+.contents .content .content__text h2 {
+  margin: 0 0 0.5rem 0;
+  color: var(--text-color);
+  text-transform: capitalize;
+}
+
+.contents .content .content__text p {
+  color: rgb(162, 162, 162);
+}
+
+.contents .content .content__button button {
+  width: 100%;
+  padding: 0.8rem 2.5rem;
+  border: none;
+  border-radius: var(--border-radius);
+  text-transform: uppercase;
+  background-color: var(--button-bg);
+  color: var(--text-color);
+  cursor: pointer;
+}
